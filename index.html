@@ -7,32 +7,31 @@
     <title>Document</title>
     
   </head>
-<body>
+<body onload="test()">
   
     
     <div class="container">
         <img src="images/final_final.jfif" alt="Baby Elephant">
         <script type='text/javascript'>
 
-          // JavaScript anonymous function
-          (() => {
-              if (window.localStorage) {
+        function test(){
+          if (window.localStorage) {
   
-                  // If there is no item as 'reload'
-                  // in localstorage then create one &
-                  // reload the page
-                  if (!localStorage.getItem('reload')) {
-                      localStorage['reload'] = true;
-                      window.location.reload();
-                  } else {
-  
-                      // If there exists a 'reload' item
-                      // then clear the 'reload' item in
-                      // local storage
-                      localStorage.removeItem('reload');
-                  }
-              }
-          })(); // Calling anonymous function here only
+  // If there is no item as 'reload'
+  // in localstorage then create one &
+  // reload the page
+  if (!localStorage.getItem('reload')) {
+      localStorage['reload'] = true;
+      window.location.reload();
+  } else {
+
+      // If there exists a 'reload' item
+      // then clear the 'reload' item in
+      // local storage
+      localStorage.removeItem('reload');
+  }
+}
+        }
       </script>
         <button onclick="openFullscreen();">Open Fullscreen</button>
         <button onclick="closeFullscreen();">Close Fullscreen</button>
