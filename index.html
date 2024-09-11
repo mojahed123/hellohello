@@ -15,22 +15,13 @@
         <script type='text/javascript'>
 
         function test(){
-          if (window.localStorage) {
-  
-  // If there is no item as 'reload'
-  // in localstorage then create one &
-  // reload the page
-  if (!localStorage.getItem('reload')) {
-      localStorage['reload'] = true;
-      window.location.reload();
-  } else {
+          window.addEventListener("load", function () {
+    animation();
+    setTimeout(otherOperation, 5000);
+}, false);
 
-      // If there exists a 'reload' item
-      // then clear the 'reload' item in
-      // local storage
-      localStorage.removeItem('reload');
-  }
-}
+function animation() {}
+function otherOperation() {}
         }
       </script>
         <button onclick="openFullscreen();">Open Fullscreen</button>
